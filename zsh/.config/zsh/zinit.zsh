@@ -6,8 +6,3 @@ if [[ ! -f "$ZINIT_HOME/zinit.zsh" ]]; then
 fi
 
 source "$ZINIT_HOME/zinit.zsh"
-
-# plugins
-zinit light zdharma-continuum/fast-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
