@@ -20,17 +20,31 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# Add snippets
+zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+zinit snippet OMZP::archlinux
+zinit snippet OMZP::kubectl
+zinit snippet OMZP::kubectx
+zinit snippet OMZP::command-not-found
+
+# Load completions
+autoload -Uz compinit && compinit
+zinit cdreplay -q
+
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color=always ${(Q)realpath}'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color=always ${(Q)realpath}'
 
 # Aliases
 alias ls='ls --color=auto'
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Init oh-my-posh
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.toml)"

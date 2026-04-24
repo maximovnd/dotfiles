@@ -13,3 +13,8 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
 export SDKMAN_DIR="$HOME/.sdkman"
+
+# For mac only
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
