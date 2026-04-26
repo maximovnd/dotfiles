@@ -1,5 +1,6 @@
-# ZSH dump
+# ZSH
 zsh/.config/zsh/.zcompdump
+zsh/.config/zsh/.zsh_sessions
 
 # LazyVim
 nvim/.config/nvim/lazy/
