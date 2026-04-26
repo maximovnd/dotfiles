@@ -41,6 +41,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color=always ${(Q)real
 
 # Aliases
 alias ls='ls --color=auto'
+alias vim='nvim'
 
 # Shell integrations
 eval "$(fzf --zsh)"

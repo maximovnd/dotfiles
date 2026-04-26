@@ -1,1 +1,27 @@
+# ZSH dump
 zsh/.config/zsh/.zcompdump
+
+# LazyVim
+nvim/.config/nvim/lazy/
+nvim/.config/nvim/.lazy/
+nvim/.config/nvim/logs/
+nvim/.config/nvim/log
+nvim/.config/nvim/.cache/
+nvim/.config/nvim/swap/
+nvim/.config/nvim/shada/
+nvim/.config/nvim/undo/
+
+# Swap files
+nvim/.config/nvim/*.swp
+nvim/.config/nvim/*.swo
+
+# LSP / Mason
+nvim/.config/nvim/mason/
+nvim/.config/nvim/lsp.log
+
+# Lazy lock
+# nvim/.config/nvim/lazy-lock.json
+
+# OS junk
+.DS_Store
+Thumbs.db
