@@ -39,7 +39,37 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color=always ${(Q)realpath}'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color=always ${(Q)realpath}'
 
+# Edit command buffer
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+
+# chpwd hook
+autoload -Uz add-zsh-hook
+
+function auto_venv() {
+  # If already in a virtualenv, do nothing
+  if [[ -n "$VIRTUAL_ENV" && "$PWD" != *"${VIRTUAL_ENV:h}"* ]]; then
+    deactivate
+    return  
+  fi
+
+  [[ -n "$VIRTUAL_ENV" ]] && return
+
+  local dir="$PWD"
+  while [[ "$dir" != "/" ]]; do
+    if [[ -f "$dir/.venv/bin/activate" ]]; then
+      source "$dir/.venv/bin/activate"
+      return
+    fi
+    dir="${dir:h}"
+  done
+}
+
+add-zsh-hook chpwd auto_venv
+
 # Aliases
+alias ll='ls -lh'
 alias ls='ls --color=auto'
 alias vim='nvim'
 

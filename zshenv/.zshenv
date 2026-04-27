@@ -9,6 +9,8 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 # local things
+export EDITOR=nvim
+export VISUAL=code
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin

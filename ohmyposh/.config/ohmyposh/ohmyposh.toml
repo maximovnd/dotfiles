@@ -36,6 +36,13 @@ grey = '#6c6c6c'
       fetch_status = true
       commit_icon = '@'
 
+  [[blocks.segments]]
+    type = 'python'
+    style = 'plain'
+    foreground = 'p:grey'
+    background = 'transparent'
+    template = '{{ if .Venv }}(venv){{ end }}'
+
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
