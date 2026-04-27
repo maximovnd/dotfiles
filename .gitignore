@@ -23,6 +23,9 @@ nvim/.config/nvim/lsp.log
 # Lazy lock
 # nvim/.config/nvim/lazy-lock.json
 
+# TMUX
+tmux/.config/tmux/plugins
+
 # OS junk
 .DS_Store
 Thumbs.db
