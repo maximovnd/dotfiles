@@ -73,6 +73,9 @@ alias ll='ls -lh'
 alias ls='ls --color=auto'
 alias vim='nvim'
 
+# Fix ssh
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

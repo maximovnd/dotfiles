@@ -14,6 +14,7 @@ export VISUAL=code
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export SDKMAN_DIR="$HOME/.sdkman"
 
 # For mac only
